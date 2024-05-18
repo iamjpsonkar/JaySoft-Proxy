@@ -1,0 +1,78 @@
+.venv
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sql
+*.sqlite3
+db.sqlite3
+*.sqlite3-journal
+
+# If you are using PostgreSQL
+*.pgsql
+*.psql
+
+# If you are using MySQL
+*.myd
+*.myi
+*.err
+
+# Django migrations
+**/migrations/**
+
+# The following lines will ignore specific files inside migrations folder
+# Uncomment if you need to include the __init__.py files but not others
+# **/migrations/*.pyc
+# **/migrations/*.py[cod]
+
+# Ignore these directories
+.DS_Store
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+*.tmproj
+.vscode/
+
+# Python virtual environments
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# VS Code specific files
+.vscode/
+
+# Jupyter Notebook files
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+*.env
+*.env.*
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
