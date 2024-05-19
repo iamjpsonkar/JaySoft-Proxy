@@ -1,0 +1,102 @@
+/* https://colorhunt.co/palette/1c16788576ff7bc9ffa3ffd6 */
+/* https://coolors.co/3a405a-f9dec9-99b2dd-e9afa3-685044 */
+
+:root {
+    --color-0: #f9dec9;
+    --color-1: #E9AFA3;
+    --color-2: #A98074;
+    --color-3: #685044;
+    --color-4: #99B2DD;
+    --color-5: #3a405a;
+
+    --main-color: var(--color-5);
+    --hover-color: var(--color-4);
+
+    --border-color: red;
+    --padding: 10px 20px;
+    --margin: 5px;
+    --background-color: var(--color-0);
+    --text-color: var(--color-5);
+    --border-radius: 5px;
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+    --text-transform: uppercase;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var()
+}
+
+.text {
+    font-family: 'Arial', sans-serif;
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+}
+
+.brdr{
+    border: 2px solid red;
+}
+
+#header {
+    color: #3a405a;
+    background-color: #99b2dd;
+    min-height:10vh;
+    min-width:100vw;
+    border: 0px solid black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position:absolute;
+    top:0px;
+}
+
+#bodycontent {
+    background-color: #f9dec9;
+    min-height:90vh;
+    min-width:100vw;
+}
+
+#footer {
+    background-color: #99b2dd;
+    color: #3a405a;
+    min-height:4vh;
+    min-width:100vw;
+    border: 0px solid black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position:static;
+    bottom:0px;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background: #e9afa3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: var(--color-5);
+    text-decoration: none; /* Removes the underline */
+}
+
+a:hover {
+    color: var(--color-3);
+    text-decoration: none; /* Ensures no underline on hover */
+}
+
+.flex-col {
+    display: flex;
+    direction: column;
+    /* justify-content: space-around; */
+    gap: 3%;
+}
