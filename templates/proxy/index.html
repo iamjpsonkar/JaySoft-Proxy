@@ -1,56 +1,49 @@
 <!DOCTYPE html>
-{% extends '../base.html' %} {% load static %} {% block body_block %}
-<div class="container">
-	<div class="row justify-content-center" style="margin-top:10px;margin-bottom:10px;">
-		<div class="col-lg-8 text-center">
-			<h2 class="header-text">❝JaySoft - Proxy: Your Ultimate Tool For Proxy❞</h2>
+{% extends '../base.html' %} {% load static %}
+{% block content_heading %}
+JaySoft - Proxy: Your Ultimate Tool For Proxy
+{% endblock %}
+{% block content %}
+<div>
+	<div>
+		<p><strong>JaySoft - Proxy</strong> is a powerful web application designed to enhance your API development and testing workflows. It functions as both a proxy server and a proxy consumer, offering a suite of essential features for developers.</p>
+		<p>With <strong>Proxy Server</strong>, you can effortlessly route requests through our proxy server, allowing for comprehensive monitoring, modification, and management of traffic between clients and servers. This is critical for debugging and optimizing API interactions.</p>
+		<p>With <strong>Proxy Consumer</strong>, you get robust API mocking capabilities, which  enables you to simulate API responses, making it possible to test your applications even when backend services are unavailable or under development. This ensures that your APIs are always reliable, robust, and production-ready.</p>
+	</div>
+	{% if logged_in %}
+	<div class="row button-row justify-content-center" style="margin-top:10px;margin-bottom:10px;">
+		<div class="col-sm-6 d-flex justify-content-center mb-3">
+			<a href="/proxy/server">
+				<button type="button" class="btn btn-primary">
+					Proxy Server
+				</button>
+			</a>
+		</div>
+		<div class="col-sm-6 d-flex justify-content-center mb-3">
+			<a href="/proxy/consumer">
+				<button type="button" class="btn btn-primary">
+					Proxy Consumer
+				</button>
+			</a>
 		</div>
 	</div>
-	<div class="row justify-content-center">
-		<div class="col-lg-8">
-			<div class="description">
-				<div>
-					<p><strong>JaySoft - Proxy</strong> is a powerful web application designed to enhance your API development and testing workflows. It functions as both a proxy server and a proxy consumer, offering a suite of essential features for developers.</p>
-					<p>With <strong>Proxy Server</strong>, you can effortlessly route requests through our proxy server, allowing for comprehensive monitoring, modification, and management of traffic between clients and servers. This is critical for debugging and optimizing API interactions.</p>
-					<p>With <strong>Proxy Consumer</strong>, you get robust API mocking capabilities, which  enables you to simulate API responses, making it possible to test your applications even when backend services are unavailable or under development. This ensures that your APIs are always reliable, robust, and production-ready.</p>
-				</div>
-				{% if logged_in %}
-				<div class="row button-row justify-content-center" style="margin-top:10px;margin-bottom:10px;">
-					<div class="col-sm-6 d-flex justify-content-center mb-3">
-						<a href="/proxy/server/">
-							<button type="button" class="btn btn-primary">
-								Proxy Server
-							</button>
-						</a>
-					</div>
-					<div class="col-sm-6 d-flex justify-content-center mb-3">
-						<a href="/proxy/consumer/">
-							<button type="button" class="btn btn-primary">
-								Proxy Consumer
-							</button>
-						</a>
-					</div>
-				</div>
-				{% else %}
-				<div class="row button-row justify-content-center" style="margin-top:10px;margin-bottom:10px;">
-					<div class="col-sm-6 d-flex justify-content-center mb-3">
-						<a href="/proxy/signup/">
-							<button type="button" class="btn btn-primary">
-								Signup
-							</button>
-						</a>
-					</div>
-					<div class="col-sm-6 d-flex justify-content-center mb-3">
-						<a href="/proxy/signin/">
-							<button type="button" class="btn btn-primary">
-								Signin
-							</button>
-						</a>
-					</div>
-				</div>
-				{% endif %}
-			</div>
+	{% else %}
+	<div class="row button-row justify-content-center" style="margin-top:10px;margin-bottom:10px;">
+		<div class="col-sm-6 d-flex justify-content-center mb-3">
+			<a href="/proxy/signup">
+				<button type="button" class="btn btn-primary">
+					Signup
+				</button>
+			</a>
+		</div>
+		<div class="col-sm-6 d-flex justify-content-center mb-3">
+			<a href="/proxy/signin">
+				<button type="button" class="btn btn-primary">
+					Signin
+				</button>
+			</a>
 		</div>
 	</div>
 </div>
+{% endif %}
 {% endblock %}

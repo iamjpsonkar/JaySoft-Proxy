@@ -7,7 +7,7 @@ from django.http import HttpResponse
 
 page_args = {
     "title":"ProxyHome",
-    "title_url":"proxy"
+    "title_url":"/proxy"
 }
 
 class ProxyView(View):
@@ -17,7 +17,10 @@ class ProxyView(View):
 class SignupView(View):
     def get(self, request):
         form = UserCreationForm()
-        return render(request, 'proxy/signup.html', {'form': form})
+        page_args.update({
+            'form': form
+        })
+        return render(request, 'proxy/signup.html', page_args)
     
     def post(self, request):
         form = UserCreationForm(request.POST)
@@ -27,20 +30,29 @@ class SignupView(View):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('home')
+            return redirect('home', page_args)
         else:
-            return render(request, 'proxy/signup.html', {'form': form})
+            page_args.update({
+                'form': form
+            })
+            return render(request, 'proxy/signup.html', page_args)
 
 class SigninView(View):
     def get(self, request):
         form = AuthenticationForm()
-        return render(request, 'proxy/signin.html', {'form': form})
+        page_args.update({
+            'form': form
+        })
+        return render(request, 'proxy/signin.html', page_args)
     
     def post(self, request):
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('home')
+            return redirect('home', page_args)
         else:
-            return render(request, 'proxy/signin.html', {'form': form})
+            page_args.update({
+                'form': form
+            })
+            return render(request, 'proxy/signin.html', page_args)

@@ -8,8 +8,8 @@
         <link href="{% static 'css/stylesheet.css' %}" rel="stylesheet">
     </head>
     <body>
-        <div class="container-fluid" id="header">
-            <div class="row">
+        <div class="container-fluid">
+            <div class="row" id="head">
                 <div class="flex-col">
                     <div>
                         <a href="/">
@@ -22,16 +22,24 @@
                         </a>
                     </div>
                 </div>
-            </div> 
-            <div class="row" id="bodycontent">
-                {% block body_block %}
-                {% endblock %}
             </div>
-            {% comment %} <div class="row" id="footer">
-                <div class="row">
-                    <h3 class="text-center">JSP <sup>&copy;</sup> 2024</h3>
-                </div> 
-            </div> {% endcomment %}
+            <div class="row" id="body">
+                <div class="container-fluid">
+                    <div class="row justify-content-center" style="margin-top:20px;margin-bottom:10px;">
+                        <div class="col-lg-8 text-center">
+                            <h2 class="header-text">❝{% block content_heading %}{% endblock %}❞</h2>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="description">
+                                {% block content %}
+                                {% endblock %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

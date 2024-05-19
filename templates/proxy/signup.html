@@ -1,53 +1,46 @@
 <!DOCTYPE html>
-{% extends '../base.html' %} {% load static %} {% block body_block %}
-<div class="container">
-	<div class="row justify-content-center" style="margin-top:10px;margin-bottom:10px;">
-		<div class="col-lg-8 text-center">
-			<h2 class="header-text">❝JaySoft - Proxy: Signup❞</h2>
-		</div>
-	</div>
-	<div class="row justify-content-center">
-		<div class="col-lg-8">
-			<div class="description">
-                <form method="post">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="id_username">Username:</label>
-                        <input class="form-control" type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus="" required="" aria-describedby="id_username_helptext" id="id_username"/>
-                        <span class="helptext" id="id_username_helptext"><small><em>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</em></small></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="id_password1">Password:</label>
-                        <input class="form-control" type="password" name="password1" autocomplete="new-password" required="" aria-describedby="id_password1_helptext" id="id_password1">
-                        <span class="helptext" id="id_password1_helptext">
-                            <em>
-                                Guidelines for your password
-                                <ul>
-                                    <li>Your password can’t be too similar to your other personal information.</li>
-                                    <li>Your password must contain at least 8 characters.</li><li>Your password can’t be a commonly used password.</li>
-                                    <li>Your password can’t be entirely numeric.</li>
-                                </ul>
-                            </em>
-                        </span>
-                    </div>
-                    <div class="form-group">
-                        <label for="id_password2">Password confirmation:</label>
-                        <input class="form-control" type="password" name="password2" autocomplete="new-password" required="" aria-describedby="id_password2_helptext" id="id_password2">
-                        <span class="helptext" id="id_password2_helptext">Enter the same password as before, for verification.</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-around;;margin-top:10px;">
-                        <div>
-                            <button type="submit" class="btn btn-primary">Signup</button>
-                        </div>
-                        <div>
-                            <a href="{% url 'proxy_signin' %}" class="btn btn-primary">
-                                Signin
-                            </a>
-                        </div>
-                    </div>
-                </form>
-			</div>
-		</div>
-	</div>
+{% extends '../base.html' %} {% load static %}
+{% block content_heading %}
+JaySoft - Proxy: Signup
+{% endblock %}
+{% block content %}
+<div>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_username">Username:</label>
+            <input class="form-control" type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus="" required="" aria-describedby="id_username_helptext" id="id_username" />
+            <span class="helptext" id="id_username_helptext"><small><em>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</em></small></span>
+        </div>
+        <div class="form-group">
+            <label for="id_password1">Password:</label>
+            <input class="form-control" type="password" name="password1" autocomplete="new-password" required="" aria-describedby="id_password1_helptext" id="id_password1">
+            <span class="helptext" id="id_password1_helptext">
+                <em>
+                    Guidelines for your password
+                    <ul>
+                        <li>Your password can’t be too similar to your other personal information.</li>
+                        <li>Your password must contain at least 8 characters.</li><li>Your password can’t be a commonly used password.</li>
+                        <li>Your password can’t be entirely numeric.</li>
+                    </ul>
+                </em>
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="id_password2">Password confirmation:</label>
+            <input class="form-control" type="password" name="password2" autocomplete="new-password" required="" aria-describedby="id_password2_helptext" id="id_password2">
+            <span class="helptext" id="id_password2_helptext">Enter the same password as before, for verification.</span>
+        </div>
+        <div style="display:flex;justify-content:space-around;;margin-top:10px;">
+            <div>
+                <button type="submit" class="btn btn-primary">Signup</button>
+            </div>
+            <div>
+                <a href="{% url 'proxy_signin' %}" class="btn btn-primary">
+                    Signin
+                </a>
+            </div>
+        </div>
+    </form>
 </div>
 {% endblock %}

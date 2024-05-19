@@ -1,53 +1,45 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 {% load static %}
-{% block body_block %}
-<div class="container">
-    <div class="row justify-content-center" style="margin-top: 20px;">
-        <div class="col-lg-8 text-center">
-            <h2 class="header-text">❝Proxy Server: Route Your API Calls Through Us❞</h2>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="description">
-				<div>
-                    <p>Experience seamless API development and testing with <strong>Proxy Server</strong>. Effortlessly route your requests through our proxy server to gain comprehensive insights into the traffic between your clients and servers. Monitor, modify, and manage interactions with ease, ensuring the reliability and efficiency of your APIs. Debug and optimize API interactions with confidence, knowing that Proxy Server has you covered.</p>
-				</div>
-				<div class="row button-row justify-content-center" style="margin-top:10px;margin-bottom:10px;">
-					<div class="col-sm-6 d-flex justify-content-center mb-3">
-						<a href="/proxy/server/create">
-							<button type="button" class="btn btn-primary">
-								Create Your Proxy Server
-							</button>
-						</a>
-					</div>
-					<div class="col-sm-6 d-flex justify-content-center mb-3">
-						<a href="/proxy/server/read">
-							<button type="button" class="btn btn-primary">
-								View Your Proxy Server
-							</button>
-						</a>
-					</div>
-				</div>
-				<div class="row button-row justify-content-center" style="margin-top:10px;margin-bottom:10px;">
-					<div class="col-sm-6 d-flex justify-content-center mb-3">
-						<a href="/proxy/server/update">
-							<button type="button" class="btn btn-primary">
-								Update Your Proxy Server
-							</button>
-						</a>
-					</div>
-					<div class="col-sm-6 d-flex justify-content-center mb-3">
-						<a href="/proxy/server/delete">
-							<button type="button" class="btn btn-primary">
-								Delete Your Proxy Server
-							</button>
-						</a>
-					</div>
-				</div>
-			</div>
-        </div>
-    </div>
+{% block content_heading %}
+Proxy Server: Route Your API Calls Through Us
+{% endblock %}
+{% block content %}
+<div>
+	<div>
+		<p>Experience seamless API development and testing with <strong>Proxy Server</strong>. Effortlessly route your requests through our proxy server to gain comprehensive insights into the traffic between your clients and servers. Monitor, modify, and manage interactions with ease, ensuring the reliability and efficiency of your APIs. Debug and optimize API interactions with confidence, knowing that Proxy Server has you covered.</p>
+	</div>
+	<div class="row button-row justify-content-center" style="margin-top:10px;margin-bottom:10px;">
+		<div class="col-sm-6 d-flex justify-content-center mb-3">
+			<a href="/proxy/server/create">
+				<button type="button" class="btn btn-primary">
+					Create Your Proxy Server
+				</button>
+			</a>
+		</div>
+		<div class="col-sm-6 d-flex justify-content-center mb-3">
+			<a href="/proxy/server/read">
+				<button type="button" class="btn btn-primary">
+					View Your Proxy Server
+				</button>
+			</a>
+		</div>
+	</div>
+	<div class="row button-row justify-content-center" style="margin-top:10px;margin-bottom:10px;">
+		<div class="col-sm-6 d-flex justify-content-center mb-3">
+			<a href="/proxy/server/update">
+				<button type="button" class="btn btn-primary">
+					Update Your Proxy Server
+				</button>
+			</a>
+		</div>
+		<div class="col-sm-6 d-flex justify-content-center mb-3">
+			<a href="/proxy/server/delete">
+				<button type="button" class="btn btn-primary">
+					Delete Your Proxy Server
+				</button>
+			</a>
+		</div>
+	</div>
 </div>
 {% endblock %}

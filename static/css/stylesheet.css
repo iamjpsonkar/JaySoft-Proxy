@@ -28,10 +28,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: var(--background-color);
-    color: var()
 }
 
 .text {
@@ -45,35 +41,21 @@ body {
     border: 2px solid red;
 }
 
-#header {
+#head {
     color: #3a405a;
     background-color: #99b2dd;
     min-height:10vh;
     min-width:100vw;
-    border: 0px solid black;
     padding-top: 3px;
     padding-bottom: 3px;
-    position:absolute;
-    top:0px;
 }
 
-#bodycontent {
+#body {
     background-color: #f9dec9;
     min-height:90vh;
     min-width:100vw;
 }
 
-#footer {
-    background-color: #99b2dd;
-    color: #3a405a;
-    min-height:4vh;
-    min-width:100vw;
-    border: 0px solid black;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    position:static;
-    bottom:0px;
-}
 
 .description {
     font-size: 1.2rem;
@@ -97,6 +79,5 @@ a:hover {
 .flex-col {
     display: flex;
     direction: column;
-    /* justify-content: space-around; */
     gap: 3%;
 }
