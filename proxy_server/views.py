@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.views import View
 
 page_args = {
-    "title":"ServerHome"
+    "title":"ServerHome",
+    "title_url":"/proxy/server"
 }
 
 class ProxyServerView(View):
