@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import ProxyConsumerView
 
 urlpatterns = [
-    path('', views.index, name='proxy_consumer_home'),
+    path('', ProxyConsumerView.as_view(), name='proxy_consumer'),
 ]

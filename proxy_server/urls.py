@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import ProxyServerView
 
 urlpatterns = [
-    path('', views.index, name='proxy_server_home'),
+    path('', ProxyServerView.as_view(), name='proxy_server'),
 ]

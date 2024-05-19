@@ -20,7 +20,7 @@ from proxy import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index),
+    path('',views.ProxyView.as_view()),
     path('proxy/', include('proxy.urls')),
     path('proxy/server/', include('proxy_server.urls')),
     path('proxy/consumer/', include('proxy_consumer.urls')),
